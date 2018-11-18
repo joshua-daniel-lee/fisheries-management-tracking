@@ -5,8 +5,10 @@ const ProjectSummary = ({ project }) => {
     <div className="card z-depth-3">
       <div className="card-content grey-text text-darken-3">
         <span className="card-title ">{project.title}</span>
-        <p>Posted by Joshua Lee</p>
-        <p className="grey-text">3rd September, 2am</p>
+        <p>
+          Posted by {project.authorFirstName} {project.authorLastName}
+        </p>
+        <p className="grey-text">{project.createdAt.toDate().toString()}</p>
       </div>
     </div>
   );

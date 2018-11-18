@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavigationBar from "./Components/Layout/NavigationBar";
+import Hero from "./Components/Layout/Hero";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import ProjectDetails from "./Components/Projects/ProjectDetails";
 import SignIn from "./Components/Authentication/SignIn";
@@ -13,6 +14,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <NavigationBar />
+          <Hero />
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route path="/project/:id" component={ProjectDetails} />

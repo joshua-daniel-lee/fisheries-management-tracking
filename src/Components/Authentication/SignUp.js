@@ -22,9 +22,6 @@ class SignUp extends Component {
   render() {
     const { authError, auth } = this.props;
     if (auth.uid) return <Redirect to="/" />;
-    console.log("this is the authError: " + authError);
-    console.log("this is the auth: " + auth);
-
     return (
       <div className="container section">
         <div className="card z-depth-3">
@@ -71,8 +68,8 @@ class SignUp extends Component {
 
 const mapStateToProps = state => {
   return {
-    auth: state.firebase.auth,
-    authError: state.auth.authError
+    authError: state.auth.authError,
+    auth: state.firebase.auth
   };
 };
 
